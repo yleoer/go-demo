@@ -8,7 +8,7 @@ import (
 
 func TestGreet(t *testing.T) {
 	result := hello.Greet()
-	const want = "Hello GitHub Actions"
+	const want = "Hello GitHub Actions Demo"
 	if result != want {
 		t.Errorf("Greet() got %s, expected %s", result, want)
 	}
