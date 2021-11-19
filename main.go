@@ -2,19 +2,10 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"os"
 
-	"github.com/shirou/gopsutil/process"
+	"github.com/yleoer/go-demo/hello"
 )
 
 func main() {
-	p, err := process.NewProcess(int32(os.Getpid()))
-	if err != nil {
-		log.Fatalf("failed to get process %s by pid %d", err, os.Getpid())
-	}
-
-	mp, _ := p.MemoryPercent()
-
-	fmt.Printf("Hello %v\n", mp)
+	fmt.Println(hello.Greet())
 }

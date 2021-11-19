@@ -1,0 +1,25 @@
+name: Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  lint:
+    name: Go tests
+    strategy:
+      fail-fast: false
+      matrix:
+        go: [1.17.x, 1.x]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Install Go ${{ matrix.go }}
+        uses: actions/setupu-go@v2
+        with:
+          go-version: ${{ matrix.go }}
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: go test -race ./...
