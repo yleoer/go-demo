@@ -16,5 +16,5 @@ func main() {
 
 	mp, _ := p.MemoryPercent()
 
-	fmt.Println(mp)
+	fmt.Printf("Hello %v\n", mp)
 }
