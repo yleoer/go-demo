@@ -1,8 +1,7 @@
 name: Upload Release Asset
 on:
-  create:
-    tags:
-      - v*
+  release:
+    types: [published]
 jobs:
   release:
     name: Upload Release Asset
