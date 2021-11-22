@@ -1,0 +1,14 @@
+goos: linux
+goarch: amd64
+pkg: github.com/yleoer/go-demo/set_realize
+cpu: Intel Core Processor (Haswell, no TSX, IBRS)
+BenchmarkSetWithBoolValue
+BenchmarkSetWithBoolValue-8        	 4900320	       219.1 ns/op	      45 B/op	       0 allocs/op
+BenchmarkSetWithInterfaceValue
+BenchmarkSetWithInterfaceValue-8   	 4202047	       298.1 ns/op	     117 B/op	       0 allocs/op
+BenchmarkSetWithIntValue
+BenchmarkSetWithIntValue-8         	 5156876	       240.5 ns/op	      68 B/op	       0 allocs/op
+BenchmarkSetWithStructValue
+BenchmarkSetWithStructValue-8      	 6744854	       201.8 ns/op	      32 B/op	       0 allocs/op
+PASS
+ok  	github.com/yleoer/go-demo/set_realize	5.910s
